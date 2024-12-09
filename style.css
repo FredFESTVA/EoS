@@ -1,0 +1,180 @@
+/* General page styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light snowflake blue */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Page header */
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #d32f2f; /* Elf red color */
+    font-size: 1.75rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #d32f2f; /* Elf red border */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display:table;
+}
+
+th, td {
+    padding: .5px;
+    text-align: center;
+    border: 1px solid #d32f2f; /* Elf red border for table cells */
+}
+
+th {
+    background-color: #d32f2f; /* Elf red header */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8; /* Light gray for alternate rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #fff; /* White for odd rows */
+}
+
+/* Input box and button styling */
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #28a745; /* Elf green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #d32f2f; /* Elf red on focus */
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #d32f2f; /* Elf red button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a31212; /* Darker Elf red on hover */
+}
+
+button:active {
+    background-color: #7a0b0b; /* Even darker on click */
+}
+
+/* Special Elf on the Shelf style for inputs and buttons */
+input[type="text"]::placeholder {
+    color: #d32f2f; /* Elf red placeholder text */
+    font-style: italic;
+}
+
+button::before {
+    content: "🎄";
+    margin-right: 10px;
+}
+
+/* Extra festive styling */
+.elf-on-shelf {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 5rem;
+    color: #d32f2f;
+    transform: rotate(5deg);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+}
+
+/* Footer and additional elements */
+footer {
+    margin-top: 300px;
+    font-size: 1rem;
+    color: #d32f2f; /* Elf red color */
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light snowflake blue */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer a {
+    
+    color: #28a745; /* Elf green for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #d32f2f; /* Elf red on hover */
+}
+
+
+
+#encodeHeader {
+    text-align: center;
+    display: none;
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;  
+    padding-bottom:5px;
+}
+#encodedMessage {
+    text-align: center;
+    text-wrap:
+    display:none;
+    margin-top: 25px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333;  
+    letter-spacing: 60px;
+    padding-bottom: 45px;
+    line-height: 4;
+    
+}
+
+/* Hide the input box and button initially after encoding */
+#inputSection {
+    display: block;
+}
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+    footer *:not(.printable *) {display:none;}
+}

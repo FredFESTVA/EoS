@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elf on a Shelf Message Encoder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+</head>
+<body>
+    <div class="container">
+        <h1>Elf on a Shelf Message Encoder</h1>
+
+        <!-- Input Box and Button (initially visible) -->
+        <div id="inputSection">
+            <input type="text" id="phraseInput" placeholder="Enter phrase to encode..." maxlength="100" style="text-transform:uppercase;">
+            <button id="encodeButton">Generate Encoded Message</button>
+        </div>
+
+        <!-- Mapping Table -->
+        <table id="characterMappingTable">
+            <thead>
+                <tr>
+                    <th>Encoded</th>
+                    <th>Decoded</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+        <div class="pagebreak">
+        
+        </div>        <!-- Display Encoded Message -->
+        <div id="encodeHeader">
+        <strong>Encoded Message: </strong>
+        </div><div id="encodedMessage" ></div>
+
+        <!-- Print Button (only shows after encoding) -->
+        <button id="printButton" style="display: none;">Print</button>
+    </div>
+<footer><a href="https://fredfestVA.com">Good Luck!!</a>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
